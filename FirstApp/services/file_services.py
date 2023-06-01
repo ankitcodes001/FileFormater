@@ -25,10 +25,10 @@ class DataFetcher:
         order_df = pd.DataFrame.from_records(order_queryset)
 
         # Returning data in CSV format
-        csv_data = {
+        data = {
             'Customer': customer_df.to_csv(index=False),
             'Product': product_df.to_csv(index=False),
             'Order': order_df.to_csv(index=False)
         }
 
-        return csv_data
+        return data
